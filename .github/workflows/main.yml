@@ -1,5 +1,6 @@
 name: a workflow for build the website
-on: push
+on: 
+ workflow-dispatch:
 jobs:
   build-jobs:
     name: super
@@ -11,3 +12,4 @@ jobs:
       run: echo heloworld
     - name: index.html
       run: cat Index.html
+
