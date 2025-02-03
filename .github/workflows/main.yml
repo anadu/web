@@ -2,6 +2,7 @@ name: a workflow for build the website
 on: push
 jobs:
   build-jobs:
+    name: super
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
