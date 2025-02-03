@@ -1,19 +1,11 @@
-
 name: Build Website
-on: 
-  workflow-dispatch:  # Manually triggered workflow
-
+on:
+  workflow_dispatch:  # Correct event name for manual trigger
 jobs:
-  build-jobs:
-    name: Super Job
+  build_jobs:
+    name: kishore
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2  # Use v2 for the latest version of actions/checkout
-
-    - name: HelloWorld Output
-      run: echo "Hello, world!"  # This step outputs a simple message
-
-    - name: Display index.html
-      run: cat index.html  # Adjust to lowercase 'index.html' if that is the correct filename
+    - name: checkout the code
+      uses: actions/checkout@v2 
+   
