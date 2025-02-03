@@ -9,3 +9,5 @@ jobs:
       name: checkout code
     - name: chekout code
       run: echo heloworld
+    - name: index.html
+      run: cat Index.html
