@@ -1,15 +1,19 @@
-name: a workflow for build the website
+
+name: Build Website
 on: 
- workflow-dispatch:
+  workflow-dispatch:  # Manually triggered workflow
+
 jobs:
   build-jobs:
-    name: super
+    name: Super Job
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-      name: checkout code
-    - name: chekout code
-      run: echo heloworld
-    - name: index.html
-      run: cat Index.html
 
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Use v2 for the latest version of actions/checkout
+
+    - name: HelloWorld Output
+      run: echo "Hello, world!"  # This step outputs a simple message
+
+    - name: Display index.html
+      run: cat index.html  # Adjust to lowercase 'index.html' if that is the correct filename
